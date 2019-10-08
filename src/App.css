@@ -2,21 +2,87 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+/****/
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid {
+  display: grid;
+  grid-template-columns: 250px;
+  grid-template-areas: "image" "text" "states";
+  width: 300px;
+  font-family: roboto;
+  border-radius: 18px;
+  background: rgb(245, 239, 239);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: 80px;
+  padding: 30px;
+}
+
+.card {
+  font-family: roboto;
+  border-radius: 18px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  border: 1px solid black;
+}
+
+.card-image {
+  grid-area: image;
+  width: 250px;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text p {
+  color: rgb(29, 16, 16);
+  margin: 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.card-states {
+  grid-area: states;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgb(255, 7, 110);
+  margin: 3px;
 }
 
-.App-link {
-  color: #09d3ac;
+.card-states p {
+  color: white;
+  padding-right: 4px;
+}
+
+.card-states .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26.87);
+}
+
+.search-box {
+  margin: 40px;
+  padding: 20px;
+
 }
